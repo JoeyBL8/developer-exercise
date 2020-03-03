@@ -7,7 +7,6 @@ import net.gameslabs.events.PlayerHasItemEvent;
 import net.gameslabs.events.PlayerRemoveItemEvent;
 import net.gameslabs.model.PlayerInventory;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,7 +23,6 @@ public class MyPlayerInventoryComponent extends Component {
 
     private void onPlayerGiveItemEvent(GivePlayerItemEvent event) {
         getPlayerInventory(event.getPlayer()).addItem(event.getItem());
-        System.out.println(getPlayerInventory(event.getPlayer()));
     }
 
     private void onPlayerRemoveItemEvent(PlayerRemoveItemEvent event) {
@@ -32,13 +30,11 @@ public class MyPlayerInventoryComponent extends Component {
         if (playerInventory.hasItem(event.getItem())) {
             event.setRemoved(playerInventory.removeItem(event.getItem()));
         }
-        System.out.println(getPlayerInventory(event.getPlayer()));
     }
 
     private void onPlayerHasItemEvent(PlayerHasItemEvent event) {
         PlayerInventory playerInventory = getPlayerInventory(event.getPlayer());
         event.setHasItem(playerInventory.hasItem(event.getItem()));
-        System.out.println(getPlayerInventory(event.getPlayer()));
     }
 
     @Override

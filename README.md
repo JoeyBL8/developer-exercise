@@ -72,7 +72,7 @@ Here is the list of tasks you need to achieve:
 - Add an inventory component in charge of giving, checking if a player has a given item and removing a given item.
     In order to complete this task, you may need to edit pre-existing code.
     Add new checks in Assignment.java to run checks on the features you have added.
-- Add a mining skill and component with different ores. A player should only be able to mine coal at level 5 (meaning a, event needs to be cancelled according to his mining level). A player should receive xp from mining an ore.
+- Add a mining skill and component with different ores. A player should only be able to mine coal at level 5 (meaning a, event needs to be cancelled according to his mining level). A player should receive xp from mining an oreType.
     Add new checks in Assignment.java to run checks on the features you have added.
 - Add a unique feature and add this feature to the README with a description of what it is supposed to do and checks in Assignment.
 
